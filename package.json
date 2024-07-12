@@ -4,12 +4,14 @@
   "description": "The backend is broken down into the following features. Each feature is a new branch. When you start a feature, create a new branch, test the code using Postman, and finally merge your code. Then the next driver will pull down the code from Github, create a new branch, and start the next feature.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@prisma/client": "^5.16.2",
     "bcrypt": "^5.1.1",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
