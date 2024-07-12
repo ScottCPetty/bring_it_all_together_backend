@@ -1,5 +1,5 @@
-const { registerQuery } = require("../queries/userQuery");
-const { loginQuery } = require("../queries/userQuery");
+
+const { registerQuery, loginQuery } = require("../queries/userQuery");
 
 const register = async (req, res) => {
   const token = await registerQuery(req.body);
@@ -15,3 +15,4 @@ module.exports = {
   register,
   login,
 };
+

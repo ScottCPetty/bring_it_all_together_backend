@@ -8,7 +8,6 @@ const authenticateToken = require("../middleware/authenticateToken");
 const router = express.Router();
 
 router.post("/register", register);
-
 router.post("/login", login);
 
 // Secure the getAllUser route with the authentication middleware
