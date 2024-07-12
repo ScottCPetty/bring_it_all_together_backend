@@ -1,3 +1,4 @@
+
 const { registerQuery, loginQuery } = require("../queries/userQuery");
 
 const register = async (req, res) => {
@@ -14,3 +15,4 @@ module.exports = {
   register,
   login,
 };
+
