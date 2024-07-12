@@ -1,16 +1,14 @@
 // const { route } = require("../shared/shared");
 // const { findUserByToken } = require("../queries/userQueries");
 const express = require("express");
-const { register, login } = require("../controllers/userControllers");
+const { register, login, displayAll } = require("../controllers/userControllers");
 const { getAllUser } = require("../queries/userQuery");
 const authenticateToken = require("../middleware/authenticateToken");
 
 const router = express.Router();
 
-const { register, displayAll } = require("../controllers/userControllers");
 router.post("/register", register);
 
-const { login } = require("../controllers/userControllers");
 router.post("/login", login);
 
 // Secure the getAllUser route with the authentication middleware
