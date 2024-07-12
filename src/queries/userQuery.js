@@ -1,4 +1,4 @@
-const { bcrypt, prisma, jwt } = require("../shared/shared");
+const { bcrypt, prisma, jwt, uuid } = require("../shared/shared");
 
 const registerQuery = async ({ firstName, lastName, email, password }) => {
   const hashPassword = await bcrypt.hash(password, 10);
@@ -22,8 +22,15 @@ const registerQuery = async ({ firstName, lastName, email, password }) => {
   return token;
 };
 
+// get all users
+const getAllUser = async () => {
+  const users = await prisma.user.findMany();
+  return users;
+};
+
 // login function
 const loginQuery = async ({ email, password }) => {
+  //search user by email
   const loginUser = await prisma.user.findUnique({
     where: {
       email,
@@ -57,4 +64,5 @@ const loginQuery = async ({ email, password }) => {
 module.exports = {
   registerQuery,
   loginQuery,
+  getAllUser,
 };
