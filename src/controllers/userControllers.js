@@ -1,4 +1,3 @@
-
 const { registerQuery, loginQuery } = require("../queries/userQuery");
 
 const register = async (req, res) => {

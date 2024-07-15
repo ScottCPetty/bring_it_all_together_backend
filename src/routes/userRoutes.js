@@ -1,7 +1,5 @@
-// const { route } = require("../shared/shared");
-// const { findUserByToken } = require("../queries/userQueries");
 const express = require("express");
-const { register, login, displayAll } = require("../controllers/userControllers");
+const { register, login } = require("../controllers/userControllers");
 const { getAllUser } = require("../queries/userQuery");
 const authenticateToken = require("../middleware/authenticateToken");
 
