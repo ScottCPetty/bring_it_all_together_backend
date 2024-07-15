@@ -60,7 +60,14 @@ const getAllUser = async () => {
   return users;
 };
 
-const deleteUser = async () => {};
+const deleteUser = async (id) => {
+  const user = await prisma.user.delete({
+    where: {
+      id,
+    },
+  });
+  return user;
+};
 
 const updateUser = async (id, firstName, lastName, email, password) => {
   const hashPassword = await bcrypt.hash(password, 10);

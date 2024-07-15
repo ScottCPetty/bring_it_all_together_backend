@@ -8,7 +8,7 @@ Here are the features:
 <!-- 4. Create the register endpoint. A user will enter an email, first name, last name, and password. The password will be encrypted using bcrypt and the end point will return the users information and a JSON web token that is good for one hour. Create a folder for routes, controllers, and queries. Here is an example. Test this in Postman -->
 <!-- 5. Create a login endpoint. The user will enter their email and password, use bcrypt compare for the password and return the users information and a JSON web token. Test this in Postman. -->
 <!-- 4. Create an endpoint to get all the users. This is a protected route, use middleware to make sure the user has a valid JSON web token. If they do return all the users, if not return an unauthorized error. Test this in Postman (Are you seeing a pattern?). -->
-5. Create a delete endpoint for a user. This is another protected route, the same as above.
-6. Create an update endpoint for a user. This should take in the email, first name, last name, and password, then update the user's information. Don’t forget to use bcrypt for the password. This is also a protected route
+<!-- 5. Create a delete endpoint for a user. This is another protected route, the same as above. -->
+<!-- 6. Create an update endpoint for a user. This should take in the email, first name, last name, and password, then update the user's information. Don’t forget to use bcrypt for the password. This is also a protected route -->
 7. Once you are done and all routes have been tested, deploy on render. Here is the link. Reach out if you have any questions.
 8. Once deployed, test all routes using Postman.
