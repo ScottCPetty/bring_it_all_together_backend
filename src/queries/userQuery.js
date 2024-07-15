@@ -62,7 +62,21 @@ const getAllUser = async () => {
 
 const deleteUser = async () => {};
 
-const updateUser = async () => {};
+const updateUser = async (id, firstName, lastName, email, password) => {
+  const hashPassword = await bcrypt.hash(password, 10);
+  const user = await prisma.user.update({
+    where: {
+      id,
+    },
+    data: {
+      firstName,
+      lastName,
+      email,
+      password: hashPassword,
+    },
+  });
+  return user;
+};
 
 // export
 module.exports = {
