@@ -22,12 +22,6 @@ const registerQuery = async ({ firstName, lastName, email, password }) => {
   return token;
 };
 
-// get all users
-const getAllUser = async () => {
-  const users = await prisma.user.findMany();
-  return users;
-};
-
 // login function
 const loginQuery = async ({ email, password }) => {
   //search user by email
@@ -60,9 +54,42 @@ const loginQuery = async ({ email, password }) => {
   return token;
 };
 
+// get all users
+const getAllUser = async () => {
+  const users = await prisma.user.findMany();
+  return users;
+};
+
+const deleteUser = async (id) => {
+  const user = await prisma.user.delete({
+    where: {
+      id,
+    },
+  });
+  return user;
+};
+
+const updateUser = async (id, firstName, lastName, email, password) => {
+  const hashPassword = await bcrypt.hash(password, 10);
+  const user = await prisma.user.update({
+    where: {
+      id,
+    },
+    data: {
+      firstName,
+      lastName,
+      email,
+      password: hashPassword,
+    },
+  });
+  return user;
+};
+
 // export
 module.exports = {
   registerQuery,
   loginQuery,
   getAllUser,
+  deleteUser,
+  updateUser,
 };
