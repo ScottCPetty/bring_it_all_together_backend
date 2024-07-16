@@ -8,3 +8,6 @@ app.listen(PORT, () => {
 
 const userRoutes = require("../src/routes/userRoutes");
 app.use("/api/user", userRoutes);
+
+const cors = require("cors");
+app.use(cors());
