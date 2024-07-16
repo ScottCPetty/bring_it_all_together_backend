@@ -1,6 +1,6 @@
-The backend is broken down into the following features. Each feature is a new branch. When you start a feature, create a new branch, test the code using Postman, and finally merge your code. Then the next driver will pull down the code from Github, create a new branch, and start the next feature.
+<!-- The backend is broken down into the following features. Each feature is a new branch. When you start a feature, create a new branch, test the code using Postman, and finally merge your code. Then the next driver will pull down the code from Github, create a new branch, and start the next feature. -->
 
-Here are the features:
+<!-- Here are the features: -->
 
 <!-- 1. Create a new repository on Github and add all the team members. -->
 <!-- 2. Build the skeleton of the backend using npm and add the dependencies. -->
@@ -10,5 +10,8 @@ Here are the features:
 <!-- 4. Create an endpoint to get all the users. This is a protected route, use middleware to make sure the user has a valid JSON web token. If they do return all the users, if not return an unauthorized error. Test this in Postman (Are you seeing a pattern?). -->
 <!-- 5. Create a delete endpoint for a user. This is another protected route, the same as above. -->
 <!-- 6. Create an update endpoint for a user. This should take in the email, first name, last name, and password, then update the user's information. Don’t forget to use bcrypt for the password. This is also a protected route -->
-7. Once you are done and all routes have been tested, deploy on render. Here is the link. Reach out if you have any questions.
-8. Once deployed, test all routes using Postman.
+<!-- 7. Once you are done and all routes have been tested, deploy on render. Here is the link. Reach out if you have any questions. -->
+<!-- 8. Once deployed, test all routes using Postman. -->
+
+Backend hosted on Render: https://dashboard.render.com/web/srv-cqakhneehbks73b2ugng
+Database hosted on Render: https://dashboard.render.com/d/dpg-cqalg0bqf0us73fvvn3g-a
