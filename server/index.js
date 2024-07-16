@@ -1,3 +1,5 @@
+const cors = require("cors");
+app.use(cors());
 require("dotenv").config();
 const { app } = require("../src/shared/shared");
 const PORT = process.env.PORT || 3000;
@@ -9,5 +11,3 @@ app.listen(PORT, () => {
 const userRoutes = require("../src/routes/userRoutes");
 app.use("/api/user", userRoutes);
 
-const cors = require("cors");
-app.use(cors());
